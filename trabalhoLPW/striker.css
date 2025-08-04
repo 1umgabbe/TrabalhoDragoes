@@ -227,6 +227,9 @@ main p {
   visibility: hidden;
   transition: opacity 0.4s ease, transform 0.4s ease;
   transform: translateY(10px);
+  text-align: justify;
+  left: 20%;
+  transform: translateX(-50%);
 }
 
 .hover-titulo:hover .hover-caixa {
@@ -292,3 +295,7 @@ main p {
   opacity: 1;
 }
 
+::selection {
+  background-color: red;
+  color: white;
+}

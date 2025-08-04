@@ -103,6 +103,7 @@
     </header>
 
     <main>
+         <img id="dragao-voador" src="imgs/dragao-gif-unscreen.gif" alt="Dragão voando">
          <section class="descricao">
             <div class="hover-titulo">
                <h2>Como são os dragões dessa classe?</h2>
@@ -149,9 +150,21 @@
          <dt>Red Death</dt>
          <dd>Pode ser traduzido como "Morte Vermelha"</dd>
       </dl>
+      <div class="easter-egg-container">
+         <img id="easter-egg-icon" src="imgs/fogo-easter-egg.png" alt="Easter Egg do Fogo">
+      </div>
     </footer>
 
-        <script>
+    <div id="easter-egg-box" class="easter-egg-box">
+      <div class="easter-egg-content">
+         <span id="close-easter-egg">&times;</span>
+         <h2>Parabéns! Você encontrou um segredo!</h2>
+         <p>Incendeie o seu coração!</p>
+         <img src="imgs/incendeie.jpg" alt="Rengoku">
+      </div>
+      </div>
+
+      <script>
   const links = document.querySelectorAll('.dragao-link');
 
   links.forEach(link => {
@@ -160,6 +173,43 @@
 
     if (linkHref === currentPage) {
       link.classList.add('ativo');
+    }
+  });
+
+       const dragao = document.getElementById("dragao-voador");
+  let posX = -200;
+  let velocidade = 2;
+
+  function animarDragao() {
+    posX += velocidade;
+    dragao.style.left = posX + "px";
+
+    if (posX < window.innerWidth + 200) {
+      requestAnimationFrame(animarDragao);
+    } else {
+      posX = -200; 
+      requestAnimationFrame(animarDragao);
+    }
+  }
+  window.addEventListener('load', () => {
+    animarDragao();
+  });
+
+  const eggIcon = document.getElementById("easter-egg-icon");
+  const eggBox = document.getElementById("easter-egg-box");
+  const closeBtn = document.getElementById("close-easter-egg");
+
+  eggIcon.addEventListener("click", () => {
+    eggBox.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    eggBox.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === eggBox) {
+      eggBox.style.display = "none";
     }
   });
 </script>
