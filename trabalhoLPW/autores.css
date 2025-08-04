@@ -162,6 +162,13 @@ main p {
   padding-top: 20px;
 }
 
+::selection {
+  background-color: red;
+  color: white;
+}
+
+
+
 
 
 
