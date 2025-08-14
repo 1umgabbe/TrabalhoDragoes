@@ -151,7 +151,19 @@
          <dt>Screaming Death</dt>
          <dd>Pode ser traduzido como "Morte Gritante"</dd>
       </dl>
+      <div class="easter-egg-container">
+         <img id="easter-egg-icon" src="imgs/easter-egg-dragao.png" alt="Easter Egg do Dragão">
+      </div>
     </footer>
+
+    <div id="easter-egg-box" class="easter-egg-box">
+      <div class="easter-egg-content">
+         <span id="close-easter-egg">&times;</span>
+         <h2>Parabéns! Você encontrou um segredo!</h2>
+         <p>Dragão Esqueleto</p>
+         <img src="imgs/dragao-estatico.gif" alt="Dragão Esqueleto">
+      </div>
+      </div>
 
         <script>
   const links = document.querySelectorAll('.dragao-link');
@@ -162,6 +174,24 @@
 
     if (linkHref === currentPage) {
       link.classList.add('ativo');
+    }
+  });
+
+    const eggIcon = document.getElementById("easter-egg-icon");
+  const eggBox = document.getElementById("easter-egg-box");
+  const closeBtn = document.getElementById("close-easter-egg");
+
+  eggIcon.addEventListener("click", () => {
+    eggBox.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    eggBox.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === eggBox) {
+      eggBox.style.display = "none";
     }
   });
 </script>

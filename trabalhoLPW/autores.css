@@ -118,14 +118,21 @@ main {
 }
 
 main h1 {
-  font-size: 50px;
+  font-size: 60px;
   font-family: 'Manufacturing Consent', sans-serif;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
-
+main h2 {
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
 
 main p {
-  font-size: 25px;
+  font-size: 30px;
    text-align: justify;
    font-family: "Oswald", sans-serif;
 }
@@ -153,13 +160,80 @@ main p {
   font-family: 'Manufacturing Consent', sans-serif;
 }
 
-.footer-container h1, h2 {
+.footer-container h1 {
   font-size: 50px;
 }
 
-.footer-container p {
-  font-size: 30px;
+.footer-container h2 {
+  font-size: 40px;
+}
+
+.footer-container span {
+  font-size: 40px;
   padding-top: 20px;
+}
+
+.easter-egg-container {
+  position: absolute;
+  bottom: 650px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#easter-egg-icon {
+  width: 15px;
+  height: 15px;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+#easter-egg-icon:hover {
+  opacity: 1;
+}
+
+.easter-egg-box {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.easter-egg-content {
+  background-color: #222;
+  color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid gold;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+}
+
+.easter-egg-content p {
+  font-size: 25px;
+}
+
+.easter-egg-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+#close-easter-egg {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: gold;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 ::selection {

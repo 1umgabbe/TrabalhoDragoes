@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autores</title>
     <link rel="stylesheet" href="autores.css">
-    <link rel="shortcut icon" href="imgs/autores.jpg">
+    <link rel="shortcut icon" href="imgs/logo-unknown.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
       <div class="header-container">
          <h1>Autores</h1>
-        <h2>As lendas que construíram este projeto!</h2>
+        <h2>Sobre nós</h2>
       </div>
         <nav id="navigation">     
            <ul class="menu-dragao">
@@ -103,36 +106,48 @@
     </header>
 
     <main>
-        <section class="quem">
-            <h1>Quem somos?</h1>
-            <p>Somos um grupo de estudantes do curso de Redes de Computadores do Centro Federal de Educação Tecnológica 
-               de Minas Gerais (CEFET-MG), campus Nova Gameleira, que se uniu para criar um catálogo interativo sobre 
-               dragões. Nosso objetivo é compartilhar informações detalhadas sobre as diferentes classes de dragões, 
-               suas características e habilidades, proporcionando uma experiência única para os amantes desse tema fascinante.</p>
-        </section>
-        <section class="integrantes">
-            <h1>Integrantes</h1>
-            <h2>Matheus Filipe</h2>
-            <p>Matheus Filipe é um estudante dedicado do curso de Redes de Computadores, apaixonado por tecnologia e 
-             programação.</p>
-             <h2>Gabriel Henrique</h2>
-             <p>Gabriel Henrique é um estudante do curso de Redes de Computadores, com interesse em design e experiência do usuário.</p>
-             <h2>Gabriel Marcucci</h2>
-             <p>Gabriel Marcucci é um estudante do curso de Redes de Computadores, focado em pesquisa e organização de conteúdo.</p>
-        </section>
-    </main>
+     <h1>Quem somos?</h1>
+     <p>Somos um grupo de estudantes do 1º ano do curso de Redes de Computadores do CEFET-MG. 
+      Adoramos o universo de Como Treinar o Seu Dragão e por isso decidimos criar este site 
+      para compartilhar nosso conhecimento sobre as diferentes classes de dragões.
+     </p>
 
-    <footer>
-      <div class="footer-container">
-         <h1>Como navegar?</h1>
-         <h2>Como ir para as outras páginas?</h2>
-         <p>Para navegar entre as páginas do catálogo, basta clicar nos links disponíveis no menu de navegação
-            (as imagens no topo da página). Cada link leva você a uma página dedicada a uma classe específica 
-            de dragão, onde você encontrará informações detalhadas sobre suas características e habilidades.</p>
+     <h1>Integrantes do Grupo</h1>
+      <h2>Matheus Filipe</h2>
+         <p>Um jovem de 15 anos que adora jogos, programação e tecnologia. 
+            Programa não só academicamente, mas também por diversão.
+         </p>
+
+     <h2>Gabriel Henrique</h2>
+         <p>Um jovem de 16 anos, que gosta não só de programação mas também de música.
+            Bom programador e também fã de Como Treinar o Seu Dragão.
+         </p>
+
+      <h2>Gabriel Marcucci</h2>
+         <p>Um jovem de 16 anos, jogador de vôlei, que adora tecnologia e jogos.
+            Ele é um grande fã de Como Treinar o Seu Dragão e adora compartilhar 
+            seu conhecimento sobre os dragões.
+         </p>
+   </main>
+
+    <footer class="footer-container">
+      <h1>Como navegar?</h1>
+      <span>Para ler informações sobre esses incríveis dragões, passe o mouse sobre "Como são os dragões dessa classe?"</span><br>
+      <div class="easter-egg-container">
+         <img id="easter-egg-icon" src="imgs/fonte-png.png" alt="Easter Egg da Fonte">
       </div>
     </footer>
 
-    <script>
+        <div id="easter-egg-box" class="easter-egg-box">
+      <div class="easter-egg-content">
+         <span id="close-easter-egg">&times;</span>
+         <h2>Parabéns! Você encontrou um segredo!</h2>
+         <p>Você encontrou a fonte dos desejos!</p>
+         <img src="imgs/fonte.png" alt="Fonte dos Desejos">
+      </div>
+      </div>
+
+        <script>
   const links = document.querySelectorAll('.dragao-link');
 
   links.forEach(link => {
@@ -144,34 +159,42 @@
     }
   });
 
- const button = document.getElementById("play-btn");
-  const video = document.getElementById("video-bg");
-  const overlay = document.getElementById("intro-video");
+         const dragao = document.getElementById("dragao-voador");
+  let posX = -200;
+  let velocidade = 2;
 
-  button.addEventListener("click", () => {
-    button.style.display = "none";
-    video.style.display = "block";
-    video.play();
-    video.volume = 1;
-    setTimeout(() => {
-      overlay.style.display = "none";
-    }, 3100);
+  function animarDragao() {
+    posX += velocidade;
+    dragao.style.left = posX + "px";
+
+    if (posX < window.innerWidth + 200) {
+      requestAnimationFrame(animarDragao);
+    } else {
+      posX = -200; 
+      requestAnimationFrame(animarDragao);
+    }
+  }
+  window.addEventListener('load', () => {
+    animarDragao();
   });
 
-      <div class="easter-egg-container">
-         <img id="easter-egg-icon" src="imgs/interrogacao-easter-egg.png" alt="Easter Egg do Desconhecido">
-      </div>
-    </footer>
+    const eggIcon = document.getElementById("easter-egg-icon");
+  const eggBox = document.getElementById("easter-egg-box");
+  const closeBtn = document.getElementById("close-easter-egg");
 
-        <div id="easter-egg-box" class="easter-egg-box">
-      <div class="easter-egg-content">
-         <span id="close-easter-egg">&times;</span>
-         <h2>Parabéns! Você encontrou um segredo!</h2>
-         <p>Só sei que nada sei...</p>
-         <img src="imgs/socrates.jpg" alt="Sócrates">
-      </div>
-      </div>
+  eggIcon.addEventListener("click", () => {
+    eggBox.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    eggBox.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === eggBox) {
+      eggBox.style.display = "none";
+    }
+  });
 </script>
-
 </body>
 </html>
