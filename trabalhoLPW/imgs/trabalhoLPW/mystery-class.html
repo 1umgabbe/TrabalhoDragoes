@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe Mystery</title>
+    <link rel="stylesheet" href="mystery.css">
+    <link rel="shortcut icon" href="imgs/logo-mystery.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+      <div class="header-container">
+         <h1>Classe Mystery</h1>
+        <h2>A classe dos dragões misteriosos!</h2>
+      </div>
+        <nav id="navigation">     
+           <ul class="menu-dragao">
+                <li><a href="index.html" class="dragao-link"> 
+                    <div class="imagem-container">
+                    <img src="imgs/introducao.webp" alt="Introdução">
+                    <span class="legenda">Página Inicial</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li><a href="boulder-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/boulder-class.webp" alt="Classe Boulder">
+                   <span class="legenda">Classe Boulder</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="mystery-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/mystery-class.webp" alt="Classe Mystery">
+                   <span class="legenda">Classe Mystery</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="sharp-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/sharp-class.webp" alt="Classe Sharp">
+                   <span class="legenda">Classe Sharp</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="stoker-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/stoker-class.webp" alt="Classe Stoker">
+                   <span class="legenda">Classe Stoker</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="striker-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/strike-class.webp" alt="Classe Striker">
+                   <span class="legenda">Classe Striker</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="tidal-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/tidal-class.webp" alt="Classe Tidal">
+                   <span class="legenda">Classe Tidal</span>
+                </div></a>
+                </li>
+
+                <li><a href="tracker-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/tracker-class.webp" alt="Classe Tracker">
+                   <span class="legenda">Classe Tracker</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="unknown-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/ponto-de-interrogacao.webp" alt="Classe Unknown">
+                   <span class="legenda">Classe Unknown</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="autores.html" class="dragao-link ">
+                <div class="imagem-container">
+                   <img src="imgs/autores.jpg" alt="Autores">
+                   <span class="legenda">Autores</span>
+                </div>
+               </a>
+                </li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+         <section class="descricao">
+            <div class="hover-titulo">
+               <h2>Como são os dragões dessa classe?</h2>
+            <div class="hover-caixa">
+               <p>Pouco se sabe sobre os dragões da Classe Mystery, devido à sua natureza furtiva e sorrateira. 
+                Os dragões desta classe são geralmente mais temidos do que os de outras classes. Esta classe tende
+                a incluir a gama mais diversa e interessante de dragões, a maioria dos quais exibe características
+                extremamente raras e únicas.
+               </p>
+            </div>        
+            </div> 
+            <div class="imagem-wrapper">
+              <div class="dragao-container">
+               <img src="imgs/ziperarrepiante.webp" alt="Ziperarrepiante">
+              <span class="nome-dragao">Cabeçaquente e Cabeçadura montados em um Ziperarrepiante</span>
+              </div>
+            </div>
+         </section>
+
+         <section class="especies">
+            <div class="hover-titulo">
+            <h2>Alguns dragões dessa classe são:</h2>
+            <div class=dragao-container>
+            <img class="dragao1" src="imgs/armorwing.webp" alt="Armorwing">
+            <span class="nome-dragao">Armorwing</span>
+            </div>
+            <div class="dragao-container">
+            <img class="dragao2" src="imgs/deathsong.webp" alt="Death Song">
+            <span class="nome-dragao">Death Song</span>
+            </div>
+            </div>
+         </section>
+    </main>
+
+    <footer class="footer-container">
+      <h1>Como navegar?</h1>
+      <span>Para ler informações sobre esses incríveis dragões, passe o mouse sobre "Como são os dragões dessa classe?"</span><br>
+      <span>Passe o mouse sobre as imagens também!</span>
+      <h1>Lista de Definições</h1>
+      <dl>
+         <dt>Armorwing</dt>
+         <dd>Pode ser traduzido como "Asa Armadurada"</dd>
+         <br>
+         <dt>Death Song</dt>
+         <dd>Pode ser traduzido como "Canção da Morte"</dd>
+      </dl>
+    </footer>
+
+        <script>
+  const links = document.querySelectorAll('.dragao-link');
+
+  links.forEach(link => {
+    const linkHref = link.getAttribute('href');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    if (linkHref === currentPage) {
+      link.classList.add('ativo');
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autores</title>
+    <link rel="stylesheet" href="autores.css">
+    <link rel="shortcut icon" href="imgs/autores.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+      <div class="header-container">
+         <h1>Autores</h1>
+        <h2>As lendas que construíram este projeto!</h2>
+      </div>
+        <nav id="navigation">     
+           <ul class="menu-dragao">
+                <li><a href="index.html" class="dragao-link"> 
+                    <div class="imagem-container">
+                    <img src="imgs/introducao.webp" alt="Introdução">
+                    <span class="legenda">Página Inicial</span>
+                    </div>
+                    </a>
+                </li>
+
+                <li><a href="boulder-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/boulder-class.webp" alt="Classe Boulder">
+                   <span class="legenda">Classe Boulder</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="mystery-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/mystery-class.webp" alt="Classe Mystery">
+                   <span class="legenda">Classe Mystery</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="sharp-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/sharp-class.webp" alt="Classe Sharp">
+                   <span class="legenda">Classe Sharp</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="stoker-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/stoker-class.webp" alt="Classe Stoker">
+                   <span class="legenda">Classe Stoker</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="striker-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/strike-class.webp" alt="Classe Striker">
+                   <span class="legenda">Classe Striker</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="tidal-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/tidal-class.webp" alt="Classe Tidal">
+                   <span class="legenda">Classe Tidal</span>
+                </div></a>
+                </li>
+
+                <li><a href="tracker-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/tracker-class.webp" alt="Classe Tracker">
+                   <span class="legenda">Classe Tracker</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="unknown-class.html" class="dragao-link">
+                <div class="imagem-container">
+                   <img src="imgs/ponto-de-interrogacao.webp" alt="Classe Unknown">
+                   <span class="legenda">Classe Unknown</span>
+                </div>
+               </a>
+                </li>
+
+                <li><a href="autores.html" class="dragao-link ">
+                <div class="imagem-container">
+                   <img src="imgs/autores.jpg" alt="Autores">
+                   <span class="legenda">Autores</span>
+                </div>
+               </a>
+                </li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="quem">
+            <h1>Quem somos?</h1>
+            <p>Somos um grupo de estudantes do curso de Redes de Computadores do Centro Federal de Educação Tecnológica 
+               de Minas Gerais (CEFET-MG), campus Nova Gameleira, que se uniu para criar um catálogo interativo sobre 
+               dragões. Nosso objetivo é compartilhar informações detalhadas sobre as diferentes classes de dragões, 
+               suas características e habilidades, proporcionando uma experiência única para os amantes desse tema fascinante.</p>
+        </section>
+        <section class="integrantes">
+            <h1>Integrantes</h1>
+            <h2>Matheus Filipe</h2>
+            <p>Matheus Filipe é um estudante dedicado do curso de Redes de Computadores, apaixonado por tecnologia e 
+             programação.</p>
+             <h2>Gabriel Henrique</h2>
+             <p>Gabriel Henrique é um estudante do curso de Redes de Computadores, com interesse em design e experiência do usuário.</p>
+             <h2>Gabriel Marcucci</h2>
+             <p>Gabriel Marcucci é um estudante do curso de Redes de Computadores, focado em pesquisa e organização de conteúdo.</p>
+        </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+         <h1>Como navegar?</h1>
+         <h2>Como ir para as outras páginas?</h2>
+         <p>Para navegar entre as páginas do catálogo, basta clicar nos links disponíveis no menu de navegação
+            (as imagens no topo da página). Cada link leva você a uma página dedicada a uma classe específica 
+            de dragão, onde você encontrará informações detalhadas sobre suas características e habilidades.</p>
+      </div>
+    </footer>
+
+    <script>
+  const links = document.querySelectorAll('.dragao-link');
+
+  links.forEach(link => {
+    const linkHref = link.getAttribute('href');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    if (linkHref === currentPage) {
+      link.classList.add('ativo');
+    }
+  });
+
+ const button = document.getElementById("play-btn");
+  const video = document.getElementById("video-bg");
+  const overlay = document.getElementById("intro-video");
+
+  button.addEventListener("click", () => {
+    button.style.display = "none";
+    video.style.display = "block";
+    video.play();
+    video.volume = 1;
+    setTimeout(() => {
+      overlay.style.display = "none";
+    }, 3100);
+  });
+
+</script>
+
+</body>
+</html>
