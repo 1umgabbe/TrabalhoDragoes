@@ -148,7 +148,19 @@
          <dt>Deathgripper</dt>
          <dd>Pode ser traduzido como "Garra Mortal"</dd>
       </dl>
+      <div class="easter-egg-container">
+         <img id="easter-egg-icon" src="imgs/easter-egg-banguela.png" alt="Easter Egg do Banguela">
+      </div>
     </footer>
+
+    <div id="easter-egg-box" class="easter-egg-box">
+      <div class="easter-egg-content">
+         <span id="close-easter-egg">&times;</span>
+         <h2>Parabéns! Você encontrou um segredo!</h2>
+         <p>Contemple o Banguela dançando</p>
+         <img src="imgs/banguela-dancando.gif" alt="Banguela Dançando">
+      </div>
+      </div>
 
         <script>
   const links = document.querySelectorAll('.dragao-link');
@@ -159,6 +171,24 @@
 
     if (linkHref === currentPage) {
       link.classList.add('ativo');
+    }
+  });
+
+    const eggIcon = document.getElementById("easter-egg-icon");
+  const eggBox = document.getElementById("easter-egg-box");
+  const closeBtn = document.getElementById("close-easter-egg");
+
+  eggIcon.addEventListener("click", () => {
+    eggBox.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    eggBox.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === eggBox) {
+      eggBox.style.display = "none";
     }
   });
 
