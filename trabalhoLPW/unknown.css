@@ -317,8 +317,8 @@ main p {
 }
 
 #easter-egg-icon {
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
   opacity: 0.4;
   transition: opacity 0.3s ease;
 }
