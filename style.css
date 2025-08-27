@@ -87,7 +87,7 @@ header {
 .dragao-link {
   text-decoration: none;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .ativo .imagem-container {
@@ -311,4 +311,5 @@ main p {
 ::selection {
   background-color: red;
   color: white;
+
 }
